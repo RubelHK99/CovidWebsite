@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>
+        <center>
+        <div class='cont'>
+                
+            <!-- if the probability of not covid is > 0.5 inform the user Covid=negative -->
+            {% if data[1] > 0.50 %}
+            <h1>Covid-19: <span style="color: red;">Negative</span></h1>
+            
+            <!-- else inform the user Covid=positive -->
+            {%else%}
+            <h1>Covid-19: <span style="color: green;">Positive</span></h1>
+            
+            {%endif%}
+
+        </div>
+  
+        <h1>Accuracy <br> 
+            <span style="font-size: 60px; color: rgb(179, 179, 179);">
+                Positive: <span style="color: green;">{{data[0]}}</span> <br>       <!-- Display probability of positive -->
+                Negative: <span style="color:red">{{data[1]}}</span> <br>       <!-- Display probability of negative -->
+            </span>
+        </h1>
+
+        <!-- Display image user uploaded below results  -->
+        <img src="{{url_for('load_img')}}" alt='img'>
+        <br><br><br>
+        <a href="/" class='btn'>go back</a> 
+        <br><br><br><br>
+    
+
+
+        </center>
+        
+    </body>
+</html>
+
