@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title></title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="static/style.css" rel="stylesheet">
+    </head>
+    <body>    
+        <center>
+            <div class='cont'>
+                <h2>Covid-19 X-RAY <br> Scanner</h2>
+            </div>
+
+
+            <header>
+                <div class="nav">
+                    <nav>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="info.html">Covid Info</a></li>
+                    </nav>
+                </div>  
+            </header>
+
+        
+            <h3> 
+                Welcome to the COVID-19 x-ray scanner
+                <br> Upload a chest x-ray image below to see if you have covid
+            </h3>
+
+
+            <div class='desc'>
+                
+                <img src="/static/Site Images/x-ray imgs/Normal-15.png">
+                <!-- <img src="/static/Site Images/x-ray imgs/Normal-26.png" width="80"> -->
+                <!-- <img src="/static/Site Images/x-ray imgs/Normal-73.png" width="80">
+                <img src="/static/Site Images/x-ray imgs/Normal-1033.png" width="80"> -->
+ 
+                <!-- <img src="/static/Site Images/x-ray imgs/COVID-98.png" width="80"> -->
+                <!-- <img src="/static/Site Images/x-ray imgs/COVID-232.png" width="80"> -->
+                <!-- <img src="/static/Site Images/x-ray imgs/COVID-3583.png" width="80">
+                <img src="/static/Site Images/x-ray imgs/COVID-3004.png" width="80"> -->
+
+            </div>
+
+
+
+            
+
+
+    <div class="buttons">
+        <!-- Create buttons to allows users to select xray from computer then submit-->
+        <form method="POST" action="{{url_for('home')}}" enctype="multipart/form-data">
+            <input type="file" name='image' class='btn'>
+            <input type="submit" class='btn'> 
+        </form>
+    </div>
+
+
+    </center>
+    
+        
+
+    </body>
+</html>
